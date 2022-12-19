@@ -1,4 +1,4 @@
-#' Get frequencies in documents
+#' Get frequencies of concordances
 #'
 #' @description
 #'
@@ -23,14 +23,13 @@
 #' @import httr
 #'
 #' @export
-get_document_frequencies <- function(urns, cutoff, words){
+get_concordances_counts <- function(urns, words, window, limit){
 
-    url <- "https://api.nb.no/dhlab/frequencies"
-
-    params <- list("urns" = urns, "cutoff" = cutoff, "words" = words)
-
+    url <- "https://api.nb.no/dhlab/conccount"
+    
+    params <- list("urns" = urns, "query" = words, "window" = window, "limit" = limit)
+    
     query <- POST(url, body = params, encode = "json")
-
-    return(content(query))
-
+    
+    return(as.data.frame(do.call(cbind, content(query))))    
 }
