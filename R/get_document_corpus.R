@@ -1,8 +1,8 @@
 #' Define a corpus 
 #'
-#' @description ...
+#' @description
 #'
-#' @usage get_document_corpus()
+#' @usage
 #'
 #' @return A data frame of metadata:
 #'
