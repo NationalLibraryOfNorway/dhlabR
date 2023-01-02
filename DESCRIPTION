@@ -1,0 +1,8 @@
+Package: dhlab-r
+Title: REST-API dhlab
+Version: 0.1.0
+Authors@R: 
+    person("Andre", "Kåsen", , "andre.kasen@nb.no", role = c("aut", "cre"))
+Description: Provid access to DHLAB-api.
+License: `use_mit_license()`
+Encoding: UTF-8
