@@ -23,7 +23,7 @@
 #' @import httr
 #'
 #' @export
-get_concordane <- function(urns, words, window, limit){
+get_concordance <- function(urns, words, window, limit){
 
     url <- "https://api.nb.no/dhlab/conc"
 
