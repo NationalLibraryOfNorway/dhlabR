@@ -23,11 +23,17 @@
 #' @import httr
 #'
 #' @export
-get_concordance <- function(urns, words, window, limit){
+get_concordance <- function(urns, words, window=20, limit=5000){
+
+    if (is.data.frame(pids)) {
+        pids <- unname(pids$urn)
+    } else {
+        pids <- unname(pids)
+    }
 
     url <- "https://api.nb.no/dhlab/conc"
 
-    params <- list("urns" = urns, "words" = words, "window" = window, "limit" = limit)
+    params <- list("urns" = pids, "words" = words, "window" = window, "limit" = limit)
 
     query <- POST(url, body = params, encode = "json")
 
