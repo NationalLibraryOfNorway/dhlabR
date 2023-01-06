@@ -23,11 +23,17 @@
 #' @import httr
 #'
 #' @export
-get_document_frequencies <- function(urns, cutoff, words){
+get_document_frequencies <- function(pids, cutoff, words){
+
+    if (is.data.frame(pids)) {
+        pids <- unname(pids$urn)
+    } else {
+        pids <- unname(pids)
+    }
 
     url <- "https://api.nb.no/dhlab/frequencies"
 
-    params <- list("urns" = urns, "cutoff" = cutoff, "words" = words)
+    params <- list("urns" = pids, "cutoff" = cutoff, "words" = words)
 
     query <- POST(url, body = params, encode = "json")
 
