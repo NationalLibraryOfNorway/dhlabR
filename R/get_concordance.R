@@ -23,7 +23,7 @@
 #' @import httr
 #'
 #' @export
-get_concordance <- function(urns, words, window=20, limit=5000){
+get_concordance <- function(pids, words, window=20, limit=5000){
 
     if (is.data.frame(pids)) {
         pids <- unname(pids$urn)
