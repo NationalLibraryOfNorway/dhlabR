@@ -4,7 +4,7 @@
 #'
 #' @usage
 #'
-#' @return A data frame of concordances:
+#' @return tuple (A,B,C,D) -> A id, B token, C token frequency, D tot token in doc
 #'
 #' |                   |                           |
 #' |:------------------|:--------------------------|
