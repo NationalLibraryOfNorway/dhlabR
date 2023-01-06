@@ -33,7 +33,7 @@ get_concordance <- function(pids, words, window=20, limit=5000){
 
     url <- "https://api.nb.no/dhlab/conc"
 
-    params <- list("urns" = pids, "words" = words, "window" = window, "limit" = limit)
+    params <- list("urns" = pids, "query" = words, "window" = window, "limit" = limit)
 
     query <- POST(url, body = params, encode = "json")
 
