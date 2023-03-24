@@ -1,8 +1,16 @@
 Package: dhlabR
-Title: REST-API dhlab
-Version: 0.1.0
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
 Authors@R: 
-    person("Andre", "Kåsen", , "andre.kasen@nb.no", role = c("aut", "cre"))
-Description: Provid access to DHLAB-api.
-License: `use_mit_license()`
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: GPL (>= 3)
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    httr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
