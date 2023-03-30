@@ -4,6 +4,7 @@
 
 ### Sjekkliste
 - [ ] Kode
+- [ ] debugge
 - [ ] Dokumentasjon
 - [ ] Tester
 
@@ -58,12 +59,23 @@
     * Maintainer
 * Pakkedokumentasjon?
     * markdown docs?
+* Dokumentasjo
 
 ## tester
 - [ ] tester for funksjoner
+  - [X] get_document_corpus 
 - [ ] windows
 - [ ] rhub?
 - [ ] mac
 - [ ] Spellceck
 - [ ] Andre?
+
+## LM notater
+### TODOs
+1. get_document_frequencies
+ * Får hits på digitidsskrift og digibok, men ikke på digavis eller digistorting
+ * Sane defautls
+ * Kan ikke kalles for hele korpus
+ 2. 
+
 
