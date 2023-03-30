@@ -59,9 +59,11 @@
     * Maintainer
 * Pakkedokumentasjon?
     * markdown docs?
+* Dokumentasjo
 
 ## tester
 - [ ] tester for funksjoner
+  - [X] get_document_corpus 
 - [ ] windows
 - [ ] rhub?
 - [ ] mac
@@ -74,5 +76,6 @@
  * Får hits på digitidsskrift og digibok, men ikke på digavis eller digistorting
  * Sane defautls
  * Kan ikke kalles for hele korpus
+ 2. 
 
 
