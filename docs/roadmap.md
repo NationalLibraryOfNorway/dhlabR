@@ -4,6 +4,7 @@
 
 ### Sjekkliste
 - [ ] Kode
+- [ ] debugge
 - [ ] Dokumentasjon
 - [ ] Tester
 
@@ -66,4 +67,12 @@
 - [ ] mac
 - [ ] Spellceck
 - [ ] Andre?
+
+## LM notater
+### TODOs
+1. get_document_frequencies
+ * Får hits på digitidsskrift og digibok, men ikke på digavis eller digistorting
+ * Sane defautls
+ * Kan ikke kalles for hele korpus
+
 

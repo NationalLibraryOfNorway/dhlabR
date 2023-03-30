@@ -37,4 +37,5 @@ get_document_frequencies <- function(pids, cutoff, words){
 
   #return(content(query))
   return(as.data.frame(do.call(cbind, content(query))))
+
   }
