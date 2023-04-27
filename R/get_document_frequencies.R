@@ -22,7 +22,7 @@
 #' tokens <- c("word1", "word2", "word3")
 #' result <- get_document_frequencies(document_ids, frequency_cutoff, tokens)
 #' }
-get_document_frequencies <- function(pids, cutoff, words){
+get_document_frequencies <- function(pids, cutoff=0, words=NULL) {
   if (is.data.frame(pids)) {
     pids <- unname(pids$urn)
   } else {
@@ -31,11 +31,32 @@ get_document_frequencies <- function(pids, cutoff, words){
 
   url <- "https://api.nb.no/dhlab/frequencies"
 
-  params <- list("urns" = pids, "cutoff" = cutoff, "words" = words)
+  # Initialize the params list with mandatory parameters
+  params <- list("urns" = pids, "cutoff" = cutoff)
 
-  query <- POST(url, body = params, encode = "json")
+  # Add the 'words' parameter, use an empty list if it's NULL
+  params$words <- if (is.null(words)) list() else words
 
-  #return(content(query))
-  return(as.data.frame(do.call(cbind, content(query))))
+  # Use jsonlite's toJSON function to properly encode the parameters
+  json_params <- jsonlite::toJSON(params, auto_unbox = TRUE)
 
+  # Send the request with the JSON-encoded parameters
+  query <- httr::POST(url, body = json_params, encode = "raw", httr::content_type("application/json"))
+
+  # Get the content of the query as a list
+  query_content <- httr::content(query, as = "parsed", simplifyDataFrame = FALSE)
+
+  # Normalize depending on returned shape
+  if (is.null(words) || length(words) == 0) {
+    # Flatten the nested list by one level
+    flattened_list <- do.call(c, query_content)
+    # Use rbind to convert the flattened list to a data frame
+    result_df <- do.call(rbind, flattened_list)
+  } else {
+    # Use rbind to convert the list to a data frame directly
+    result_df <- do.call(rbind, query_content)
   }
+
+  return(as.data.frame(result_df))
+}
+

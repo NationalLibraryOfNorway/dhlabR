@@ -4,7 +4,7 @@
 \alias{get_document_frequencies}
 \title{Retrieve Token Frequencies in Documents}
 \usage{
-get_document_frequencies(pids, cutoff, words)
+get_document_frequencies(pids, cutoff = 0, words = NULL)
 }
 \arguments{
 \item{pids}{A vector or data frame containing document IDs.}
