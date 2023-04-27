@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # tmp files?
 *.R~
+.Rproj.user
+.Rdata
+.DS_Store
