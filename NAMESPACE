@@ -2,10 +2,13 @@
 
 export(get_collocations)
 export(get_concordance)
+export(get_dispersion)
 export(get_document_corpus)
 export(get_document_frequencies)
 export(get_metadata)
+export(get_ngram_from_books)
 export(get_reference_words)
 export(get_urn_frequencies)
 import(httr)
 import(jsonlite)
+importFrom(utils,stack)
