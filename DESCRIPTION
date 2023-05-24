@@ -1,10 +1,10 @@
 Package: dhlabR
-Title: What the Package Does (One Line, Title Case)
+Title: National Library of Norway quantitative text data
 Version: 0.0.0.9000
 Authors@R: c(
     person("Lars", "Tungland", , "lars.tungland@nb.no", role = c("aut", "cre")),
-    person("Andre", "Kåsen", , "andre.kasen@nb.no", role = "aut"))
-Description: What the package does (one paragraph).
+    person("Andre", "Kåsen", , "andre.kasen@nb.no", role = c("aut", "cph")))
+Description: Provides functions for accessing data from National Library of Norways dhlab data for qualitative text analysis.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
