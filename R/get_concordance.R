@@ -14,13 +14,11 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' document_ids <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
 #' tokens <- "Norge"
 #' window <- 20
 #' limit <- 1000
 #' result <- get_concordance(document_ids, tokens, window, limit)
-#' }
 get_concordance <- function(pids, words, window=20, limit=5000) {
   if (is.data.frame(pids)) {
     pids <- unname(pids$urn)

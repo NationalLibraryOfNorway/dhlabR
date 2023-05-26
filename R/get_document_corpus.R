@@ -21,9 +21,7 @@
 #' @return A data frame of metadata
 #'
 #' @examples
-#' \dontrun{
-#'   get_document_corpus(doctype = 'digibok', author = 'Henrik Ibsen', limit = 5)
-#' }
+#'   get_document_corpus(doctype = 'digibok', author = 'Henrik Ibsen', limit = 2)
 #'
 #' @import httr
 #' @export

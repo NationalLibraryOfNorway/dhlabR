@@ -22,11 +22,9 @@ A data frame containing the concordance results for each word in the specified d
 This function obtains the concordance for specified words within given documents.
 }
 \examples{
-\dontrun{
 document_ids <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
 tokens <- "Norge"
 window <- 20
 limit <- 1000
 result <- get_concordance(document_ids, tokens, window, limit)
-}
 }

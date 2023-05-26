@@ -13,13 +13,11 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' doctype <- "digibok"
 #' from_year <- 1900
 #' to_year <- 2000
-#' words <- c("word1", "word2", "word3")
+#' words <- c("og", "eller", "men")
 #' result <- get_reference_words(doctype, from_year, to_year, words)
-#' }
 get_reference_words <- function(doctype = "digibok", from_year = 1990, to_year = 2000, words = NULL){
 
   url <- "https://api.nb.no/dhlab/reference_words"

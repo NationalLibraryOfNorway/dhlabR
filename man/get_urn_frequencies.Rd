@@ -23,15 +23,13 @@ It queries the National Library's API to fetch the word count data.
 }
 \examples{
 # Example usage with a list of URNs
-\dontrun{
-urn_list <- c("URN1", "URN2", "URN3")
+urn_list <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
 word_counts <- get_urn_frequencies(urn_list)
 print(word_counts)
-}
+
 # Example usage with a data frame of URNs
-\dontrun{
-urn_dataframe <- data.frame(urn = c("URN1", "URN2", "URN3"))
+urn_list <-  c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
+urn_dataframe <- data.frame(urn = urn_list)
 word_counts <- get_urn_frequencies(urn_dataframe)
-print(word_counts)
-}
+
 }

@@ -24,9 +24,8 @@ A data frame of concordances.
 This function retrieves collocation data from a corpus using a given word and a list of unique identifiers (pids) of corpus data frame.
 }
 \examples{
-\dontrun{
-  pids <- c("pid1", "pid2", "pid3")
-  word <- "example"
-  concordances <- get_collocations(pids, word)
-}
+pids <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
+word <- "."
+collocations <- get_collocations(pids, word)
+
 }

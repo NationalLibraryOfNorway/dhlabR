@@ -18,10 +18,6 @@ A dataframe containing the National Library metadata for the specified objects.
 This function retrieves metadata for objects from the National Library API based on either a vector of dhlabids or a vector of National Library URNs.
 }
 \examples{
-\dontrun{
-  dhlabids_example <- c("dhlabid1", "dhlabid2", "dhlabid3")
-  urns_example <- c("URN1", "URN2", "URN3")
-  metadata_dhlabids <- get_metadata(dhlabids = dhlabids_example)
+  urns_example <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
   metadata_urns <- get_metadata(urns = urns_example)
-}
 }

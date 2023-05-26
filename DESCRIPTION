@@ -1,10 +1,12 @@
 Package: dhlabR
-Title: National Library of Norway Quantitative Text Data
+Title: National Library of Norway Quantitative Text Data API tools
 Version: 1.0.0
 Authors@R: c(
     person("Lars", "Tungland", , "lars.tungland@nb.no", role = c("aut", "cre")),
     person("Andre", "Kåsen", , "andre.kasen@nb.no", role = c("aut", "cph")))
-Description: Provides functions for accessing data from National Library of Norways dhlab data for qualitative text analysis.
+Description: Tools for accessing data from National Library of Norway's dhlab (digital humanities laboratory).
+    Provides wrappers for accessing our API services at <https://api.nb.no/dhlab/>.
+    To learn more about dhlab, visit out site <https://www.nb.no/dh-lab/>.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

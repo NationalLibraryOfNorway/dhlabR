@@ -14,11 +14,10 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#'   pids <- c("pid1", "pid2", "pid3")
-#'   word <- "example"
-#'   concordances <- get_collocations(pids, word)
-#' }
+#'pids <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
+#'word <- "."
+#'collocations <- get_collocations(pids, word)
+#'
 get_collocations <- function(pids, word, before=10, after=10, sample_size=5000){
 
   if (is.data.frame(pids)) {

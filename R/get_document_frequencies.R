@@ -16,12 +16,10 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' document_ids <- c("doc1", "doc2", "doc3")
+#' document_ids <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
 #' frequency_cutoff <- 10
-#' tokens <- c("word1", "word2", "word3")
+#' tokens <- c(".", ",", "men")
 #' result <- get_document_frequencies(document_ids, frequency_cutoff, tokens)
-#' }
 get_document_frequencies <- function(pids, cutoff=0, words=NULL) {
   if (is.data.frame(pids)) {
     pids <- unname(pids$urn)

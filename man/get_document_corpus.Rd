@@ -60,8 +60,6 @@ A data frame of metadata
 Retrieve a corpus of documents based on the given parameters.
 }
 \examples{
-\dontrun{
-  get_document_corpus(doctype = 'digibok', author = 'Henrik Ibsen', limit = 5)
-}
+  get_document_corpus(doctype = 'digibok', author = 'Henrik Ibsen', limit = 2)
 
 }

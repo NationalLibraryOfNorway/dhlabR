@@ -6,12 +6,8 @@
 #' @param urns A vector of National Library URNs (default is NULL). When provided, the function will use URNs to fetch metadata.
 #' @return A dataframe containing the National Library metadata for the specified objects.
 #' @examples
-#' \dontrun{
-#'   dhlabids_example <- c("dhlabid1", "dhlabid2", "dhlabid3")
-#'   urns_example <- c("URN1", "URN2", "URN3")
-#'   metadata_dhlabids <- get_metadata(dhlabids = dhlabids_example)
+#'   urns_example <- c("URN:NBN:no-nb_digibok_2008051404065", "URN:NBN:no-nb_digibok_2010092120011")
 #'   metadata_urns <- get_metadata(urns = urns_example)
-#' }
 #' @export
 get_metadata <- function(dhlabids = NULL, urns = NULL){
 
