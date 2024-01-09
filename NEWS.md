@@ -1,6 +1,4 @@
-# dhlabR (development version)
-
-# dhlabr 1.0.3
+# dhlabR 1.0.3
 * Added api_call_wrapper
 
 # dhlabR 1.0.2
