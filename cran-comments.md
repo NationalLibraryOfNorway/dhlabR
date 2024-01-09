@@ -1,4 +1,3 @@
-## Resubmission
-This is a resubmission. In this version I have:
+# R CMD check results
 
-* Converted the DESCRIPTION title to title case.
+0 errors | 0 warnings | 0 notes
