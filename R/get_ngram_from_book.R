@@ -26,10 +26,15 @@
 #' get_ngram_from_books(lang = "eng", word = list("library"))
 get_ngram_from_books <- function(city = NULL, ddk = NULL, lang = NULL, period = list(), publisher = NULL, title = NULL, topic = NULL, word = list("hus", "blokk")){
 
-  ngram_book <- "https://api.nb.no/dhlab/ngram_book"
+  url <- "https://api.nb.no/dhlab/ngram_book"
 
   params <- list("city" = city, "ddk" = ddk, "lang" = lang, "period" = period, "publisher" = publisher, "title" = title, "topic" = topic, "word" = word)
-  query <- POST(ngram_book, body = params, encode = "json")
+  #query <- POST(ngram_book, body = params, encode = "json")
+  query <- api_call_wrapper(url, body = params, encode = "json")
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   return(stack(content(query)))
 }

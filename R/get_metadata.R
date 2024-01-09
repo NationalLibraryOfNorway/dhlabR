@@ -14,7 +14,12 @@ get_metadata <- function(dhlabids = NULL, urns = NULL){
   url <- "https://api.nb.no/dhlab/get_metadata"
 
   params <- list("dhlabids" = dhlabids, "urns" = urns)
-  query <- POST(url, body = params, encode = "json")
+  #query <- POST(url, body = params, encode = "json")
+  query <- api_call_wrapper(url, body = params, encode = "json")
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   return(do.call(cbind, content(query)))
 

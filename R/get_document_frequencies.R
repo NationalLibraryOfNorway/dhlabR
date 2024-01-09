@@ -39,7 +39,12 @@ get_document_frequencies <- function(pids, cutoff=0, words=NULL) {
   json_params <- jsonlite::toJSON(params, auto_unbox = TRUE)
 
   # Send the request with the JSON-encoded parameters
-  query <- httr::POST(url, body = json_params, encode = "raw", httr::content_type("application/json"))
+  #query <- httr::POST(url, body = json_params, encode = "raw", httr::content_type("application/json"))
+  query <- api_call_wrapper(url, body = json_params, encode = "json", content_type("application/json"))
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   # Get the content of the query as a list
   query_content <- httr::content(query, as = "parsed", simplifyDataFrame = FALSE)

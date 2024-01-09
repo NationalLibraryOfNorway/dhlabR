@@ -18,7 +18,8 @@ get_ngram <- function(word, corpus, language = NULL) {
   }
 
   params <- list("terms" = word, "corpus" = corpus, "lang" = language)
-  result <- GET(NGRAM_API, query=params)
+  # result <- GET(NGRAM_API, query=params)
+  result <- api_call_wrapper(NGRAM_API, query=params, method = "GET")
 
   # return(as.data.frame(do.call(rbind, content(result))))
   return (content(result))

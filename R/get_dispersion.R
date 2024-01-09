@@ -34,7 +34,13 @@ get_dispersion <- function(urn = NULL, words = list(".", ","), window = 500, pr 
 
   for (word in words) {
     params <- list("urn" = urn, "words" = word, "window" = window, "pr" = pr)
-    query <- POST(url, body = params, encode = "json")
+    #query <- POST(url, body = params, encode = "json")
+    query <- api_call_wrapper(url, body = params, encode = "json")
+
+    if  (is.null(query)) {
+      return(NULL)
+    }
+
 
     data <- as.data.frame(do.call(rbind, content(query)))
     colnames(data) <- word

@@ -23,7 +23,12 @@ get_reference_words <- function(doctype = "digibok", from_year = 1990, to_year =
   url <- "https://api.nb.no/dhlab/reference_words"
 
   params <- list("doctype" = doctype, "from_year" = from_year, "to_year" = to_year, "words" = words)
-  query <- POST(url, body = params, encode = "json")
+  #query <- POST(url, body = params, encode = "json")
+  query <- api_call_wrapper(url, body = params, encode = "json")
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   return(content(query))
 

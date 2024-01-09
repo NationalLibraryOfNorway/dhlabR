@@ -37,7 +37,12 @@ get_urn_frequencies <- function(urns = NULL, dhlabids = NULL){
 
   # params <- list("urns" = urns)
   params <- list("dhlabid" = dhlabids, "urns" = urns)
-  query <- POST(url, body = params, encode = "json")
+  #query <- POST(url, body = params, encode = "json")
+  query <- api_call_wrapper(url, body = params, encode = "json")
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   result <- as.data.frame(do.call(rbind, content(query)))
 

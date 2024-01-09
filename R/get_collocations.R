@@ -30,7 +30,12 @@ get_collocations <- function(pids, word, before=10, after=10, sample_size=5000){
 
   params <- list("urn" = pids, "word" = word, "before" = before, "after" = after, "samplesize" = sample_size)
 
-  query <- POST(url, body = params, encode = "json")
+  # query <- POST(url, body = params, encode = "json")
+  query <- api_call_wrapper(url, body = params, encode = "json")
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   return(as.data.frame(do.call(cbind, fromJSON(content(query)))))
 

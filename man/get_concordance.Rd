@@ -4,7 +4,7 @@
 \alias{get_concordance}
 \title{Retrieve Concordance for Words in Documents}
 \usage{
-get_concordance(pids, words, window = 20, limit = 5000)
+get_concordance(pids, words, window = 20, limit = 10)
 }
 \arguments{
 \item{pids}{A vector or data frame containing document IDs.}

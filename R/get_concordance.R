@@ -19,7 +19,7 @@
 #' window <- 20
 #' limit <- 1000
 #' result <- get_concordance(document_ids, tokens, window, limit)
-get_concordance <- function(pids, words, window=20, limit=5000) {
+get_concordance <- function(pids, words, window=20, limit=10) {
   if (is.data.frame(pids)) {
     pids <- unname(pids$urn)
   } else {
@@ -33,6 +33,11 @@ get_concordance <- function(pids, words, window=20, limit=5000) {
   json_params <- jsonlite::toJSON(params, auto_unbox = TRUE)
 
   query <- POST(url, body = json_params, encode = "raw", content_type("application/json"))
+  #query <- api_call_wrapper(url, body = json_params, encode = "raw", content_type("application/json"))
+
+  if  (is.null(query)) {
+    return(NULL)
+  }
 
   if (http_status(query)$category != "Success") {
     warning("API request failed: ", http_status(query)$message)
