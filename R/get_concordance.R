@@ -32,8 +32,8 @@ get_concordance <- function(pids, words, window=20, limit=10) {
 
   json_params <- jsonlite::toJSON(params, auto_unbox = TRUE)
 
-  query <- POST(url, body = json_params, encode = "raw", content_type("application/json"))
-  #query <- api_call_wrapper(url, body = json_params, encode = "raw", content_type("application/json"))
+  # query <- POST(url, body = json_params, encode = "raw", content_type("application/json"))
+  query <- api_call_wrapper(url, body = json_params, encode = "raw", content_type("application/json"))
 
   if  (is.null(query)) {
     return(NULL)
