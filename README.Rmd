@@ -40,3 +40,6 @@ library(dhlabR)
 
 corpus = get_document_corpus(doctype="digibok", "author" = "Ibsen", limit=100)
 ```
+## Methodology
+
+We have used tidyverse from [r for data science](https://r4ds.hadley.nz/) and devtools as described in [r packages](https://r-pkgs.org/) to build this package.
