@@ -1,7 +1,6 @@
-## Resubmission
+## Submission
 
-* I have added the function for graceful api call to get_collocation
-* Added a test for the api_call_wrapper
+* Change maintainer roles
 
 ## R CMD check results
 
