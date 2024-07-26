@@ -1,6 +1,6 @@
 Package: dhlabR
 Title: National Library of Norway Quantitative Text Data API Tools
-Version: 1.0.5
+Version: 1.0.6
 Authors@R: c(
     person("Ingerid", "Dale", ,"ingerid.dale@nb.no", role = c("aut", "cre")),
     person("Lars", "Johnsen", ,"lars.johnsen@nb.no", role = c("aut", "cph")),
